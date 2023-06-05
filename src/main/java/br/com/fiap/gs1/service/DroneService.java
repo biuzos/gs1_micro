@@ -40,7 +40,7 @@ public class DroneService {
 		return droneRepository.save(updateDrone);
 	}
 
-	public void deletaCliente(Long id) {
+	public void deletaDrone(Long id) {
 		DroneModel drone = this.findById(id);
 		droneRepository.delete(drone);
 	}
