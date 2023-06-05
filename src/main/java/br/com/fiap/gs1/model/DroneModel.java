@@ -40,7 +40,7 @@ public class DroneModel {
 	@Column(name = "capacidade_bateria")
 	private Integer capacidadeBateria;
 
-	@OneToMany(mappedBy = "drone", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "drone")
 	private Set<TelemetriaModel> telemetrias;
 
 	public Set<TelemetriaModel> getTelemetrias() {
@@ -50,7 +50,7 @@ public class DroneModel {
 	public void setTelemetrias(Set<TelemetriaModel> telemetrias) {
 		this.telemetrias = telemetrias;
 	}
-
+	
 	public Long getId() {
 		return id;
 	}
