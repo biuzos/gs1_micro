@@ -108,5 +108,14 @@ public class TelemetriaModel {
 	public TelemetriaModel() {
 
 	}
+	public TelemetriaModel(Double latitude, Double longitude, Double altitude, Double velocidade, Double direcao, LocalDateTime tempo, DroneModel drone) {
+	    this.latitude = latitude;
+	    this.longitude = longitude;
+	    this.altitude = altitude;
+	    this.velocidade = velocidade;
+	    this.direcao = direcao;
+	    this.tempo = tempo;
+	    this.drone = drone;
+	}
 
 }

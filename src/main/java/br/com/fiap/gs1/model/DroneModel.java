@@ -1,6 +1,6 @@
 package br.com.fiap.gs1.model;
 
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -41,7 +41,15 @@ public class DroneModel {
 	private Integer capacidadeBateria;
 
 	@OneToMany(mappedBy = "drone", cascade = CascadeType.ALL)
-	private List<TelemetriaModel> telemetrias;
+	private Set<TelemetriaModel> telemetrias;
+
+	public Set<TelemetriaModel> getTelemetrias() {
+		return telemetrias;
+	}
+
+	public void setTelemetrias(Set<TelemetriaModel> telemetrias) {
+		this.telemetrias = telemetrias;
+	}
 
 	public Long getId() {
 		return id;
@@ -105,14 +113,6 @@ public class DroneModel {
 
 	public void setCapacidadeBateria(Integer capacidadeBateria) {
 		this.capacidadeBateria = capacidadeBateria;
-	}
-
-	public List<TelemetriaModel> getTelemetrias() {
-		return telemetrias;
-	}
-
-	public void setTelemetrias(List<TelemetriaModel> telemetrias) {
-		this.telemetrias = telemetrias;
 	}
 
 	public DroneModel() {
