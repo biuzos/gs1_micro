@@ -1,7 +1,6 @@
 package dto;
 
-public class DroneDTO {
-	private Long id;
+public class CriaDroneDTO {
 	private String identificador;
 	private String modelo;
 	private String numeroSerie;
@@ -9,14 +8,6 @@ public class DroneDTO {
 	private Integer horasVoo;
 	private Double capacidadeCarga;
 	private Integer capacidadeBateria;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public String getIdentificador() {
 		return identificador;

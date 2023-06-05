@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.0</version>
+		<version>2.7.11</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.fiap</groupId>
@@ -14,11 +14,21 @@
 	<description>Global solution 1 da matéria de Microservices</description>
 	<properties>
 		<java.version>8</java.version>
+		<ojdbc8.version>23.2.0.0</ojdbc8.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>javax.persistence-api</artifactId>
+			<version>2.2</version>
 		</dependency>
 
 		<dependency>
@@ -29,7 +39,7 @@
 		<dependency>
 			<groupId>com.oracle.database.jdbc</groupId>
 			<artifactId>ojdbc8</artifactId>
-			<scope>runtime</scope>
+			<version>${ojdbc8.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
