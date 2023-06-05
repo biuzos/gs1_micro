@@ -117,4 +117,15 @@ public class DroneModel {
 
 	public DroneModel() {
 	}
+
+	public DroneModel(String identificador, String modelo, String numeroSerie, String licencaVoar, Integer horasVoo,
+			Double capacidadeCarga, Integer capacidadeBateria) {
+		this.identificador = identificador;
+		this.modelo = modelo;
+		this.numeroSerie = numeroSerie;
+		this.licencaVoar = licencaVoar;
+		this.horasVoo = horasVoo;
+		this.capacidadeCarga = capacidadeCarga;
+		this.capacidadeBateria = capacidadeBateria;
+	}
 }

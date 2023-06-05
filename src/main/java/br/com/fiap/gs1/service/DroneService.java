@@ -20,9 +20,14 @@ public class DroneService {
 	}
 
 	public DroneModel findById(Long id) {
+		DroneModel[] drone = new DroneModel[1];
 		Optional<DroneModel> droneOp = droneRepository.findById(id);
-		return droneOp.orElse(null);
+		droneOp.ifPresent(d -> {
+			drone[0] = d;
+		});
+		return drone[0];
 	}
+
 
 	public DroneModel save(CriaDroneDTO criaDroneDto) {
 		DroneModel drone = new DroneModel();
@@ -33,6 +38,7 @@ public class DroneService {
 		drone.setHorasVoo(criaDroneDto.getHorasVoo());
 		drone.setCapacidadeBateria(criaDroneDto.getCapacidadeBateria());
 		drone.setCapacidadeCarga(criaDroneDto.getCapacidadeCarga());
+		
 		return droneRepository.save(drone);
 	}
 
