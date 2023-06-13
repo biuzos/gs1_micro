@@ -14,7 +14,7 @@ import javax.persistence.Table;
 @Table(name = "drones")
 public class DroneModel {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private Long id;
 

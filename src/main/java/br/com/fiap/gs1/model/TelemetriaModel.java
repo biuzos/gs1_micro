@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @Table(name = "telemetria")
 public class TelemetriaModel {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private Long id;
 
